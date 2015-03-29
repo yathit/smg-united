@@ -40,7 +40,7 @@ class InquiryPost(webapp.RequestHandler):
   def post(self):
     
     person = cgi.escape(self.request.get('Salutation') + ' ' + self.request.get('Name'))
-    message = mail.EmailMessage(sender='Webserver <kyawtun@smg-united.com>')
+    message = mail.EmailMessage(sender='Webserver <kyawtuns@smg-united.com>')
     message.subject = "[server] Inquiry from the web site"
     message.to = "inquiry@smg-united.com"
     message.body = 'Name: ' + person + "\n" + \
