@@ -1,0 +1,18 @@
+application: smg-united-2
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /images
+  static_dir: images
+  
+- url: /javascripts
+  static_dir: javascripts
+  
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /.*
+  script: index.py
